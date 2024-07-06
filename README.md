@@ -5,7 +5,8 @@
 
 
 # News Summarizer
-Long Description about project. This project do that. This project is awesome...
+This is a Python script that functions as a command-line tool. It allows you to provide your interests, retrieves news articles based on those interests, and generates summaries using a pre-trained model.
+It runs on your computer's terminal and doesn't have a graphical user interface (GUI) like a traditional mobile or desktop app.
 ## Team members
 1. [Keerthana A R](https://github.com/keerthana-ar)
 2. [Iris Mariah Kurien](https://github.com/irisxvii)
