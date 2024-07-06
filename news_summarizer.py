@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -6,22 +7,44 @@ from webdriver_manager.chrome import ChromeDriverManager  # Replace with your br
 from bs4 import BeautifulSoup
 
 def get_news_articles(sources, interests):
-    driver = webdriver.Chrome(ChromeDriverManager().install())  # Replace with your browser's driver
     articles = []
+    options = Options()
+    options.binary_location = ChromeDriverManager().install()  # Set ChromeDriver path
+
+    # Create Chrome webdriver instance (replace with desired browser's driver if needed)
+    driver = webdriver.Chrome(options=options)
+
     for source in sources:
         driver.get(source)
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "article-list")))  # Adjust selector as needed
-
         soup = BeautifulSoup(driver.page_source, 'html.parser')
-        article_elements = soup.find_all('article')  # Replace with appropriate selector for article elements
 
-        for article in article_elements:
-            headline = article.find('h2', class_='headline').text.strip()  # Replace with selectors for headline and summary
-            summary = article.find('p', class_='summary').text.strip()  # Replace with selectors for headline and summary
-            if any(interest.lower() in headline.lower() for interest in interests):
-                articles.append({"headline": headline, "summary": summary})
+    # Find relevant articles based on interests (adjust selectors as needed)
+    for article in soup.find_all('article'):
+        title_element = article.find('h2', class_='some-title-class')  # Replace with specific class
+        if title_element:
+            title = title_element.text.strip()
+            url = article.find('a', href=True)['href']
 
-    driver.quit()
+    # Check if title contains any user interest keywords
+    if any(interest.lower() in title.lower() for interest in interests):
+        article_text = ""
+
+    # Extract article text from the page (adjust selectors as needed)
+    text_elements = article.find_all('p', class_='some-text-class')  # Replace with specific class
+    for element in text_elements:
+        article_text += element.text.strip()
+
+    # Optionally, use requests to fetch full article content if needed
+    # article_response = requests.get(url)
+    # article_text = article_response.text  # Extract text from response
+
+    articles.append({
+        "title": title,
+        "url": url,
+        "text": article_text
+    })
+
+    driver.quit()  # Close the browser window
     return articles
 
 from transformers import pipeline
