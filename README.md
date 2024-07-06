@@ -30,6 +30,6 @@ BeautifulSoup <br>
    ```
      ```
    pip install beautifulsoup4 requests selenium
-       ```
+       
 ## How to Run
 run the python file
