@@ -16,11 +16,11 @@ It runs on your computer's terminal and doesn't have a graphical user interface 
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
-transformers
-selenium
-selenium.webdriver.chrome.service
-selenium.webdriver.chrome.options
-BeautifulSoup
+transformers <br>
+selenium  <br>
+selenium.webdriver.chrome.service <br>
+selenium.webdriver.chrome.options <br>
+BeautifulSoup <br>
 ## How to configure
 Instructions for setting up project
 ## How to Run
