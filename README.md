@@ -24,12 +24,13 @@ BeautifulSoup <br>
 ## How to configure
 1. clone this repo to your local machine
 2. download chrome driver
-3. run these commands in the terminal <br>
-   ```
+3. run these commands in the terminal
+```
+   pip install jax jaxlib 
    pip install selenium
-   ```
-     ```
    pip install beautifulsoup4 requests selenium
+   ```
+   
        
 ## How to Run
 run the python file
