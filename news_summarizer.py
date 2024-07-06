@@ -101,7 +101,7 @@ def main():
     """
 
     # Get command-line arguments (replace with argparse if needed)
-    sources = ["https://www.nytimes.com/", "https://www.bbc.com/"]
+    sources = ["https://www.nytimes.com/"]
     interests = ["technology", "business"]
 
     articles = get_news_articles(sources, interests)
