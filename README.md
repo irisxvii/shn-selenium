@@ -16,11 +16,11 @@ It runs on your computer's terminal and doesn't have a graphical user interface 
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
-transformers <br>
-selenium  <br>
-selenium.webdriver.chrome.service <br>
-selenium.webdriver.chrome.options <br>
-BeautifulSoup <br>
+1. transformers
+2. selenium  
+3. selenium.webdriver.chrome.service 
+4. selenium.webdriver.chrome.options 
+5. BeautifulSoup 
 ## How to configure
 1. clone this repo to your local machine
 2. download chrome driver
