@@ -27,8 +27,9 @@ BeautifulSoup <br>
 3. run these commands in the terminal <br>
    ```
    pip install selenium
-   pip install beautifulsoup4 requests selenium
-   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
    ```
+     ```
+   pip install beautifulsoup4 requests selenium
+       ```
 ## How to Run
 run the python file
