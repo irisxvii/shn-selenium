@@ -10,11 +10,6 @@ It runs on your computer's terminal and doesn't have a graphical user interface 
 ## Team members
 1. [Keerthana A R](https://github.com/keerthana-ar)
 2. [Iris Mariah Kurien](https://github.com/irisxvii)
-## Link to product walkthrough
-[link to video](Link Here)
-## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
 ## Libraries used
 1. transformers
 2. selenium  
